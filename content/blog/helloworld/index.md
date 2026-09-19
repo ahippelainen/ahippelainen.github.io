@@ -1,0 +1,27 @@
+---
+title: "Hello World!"
+date: 2026-09-20
+description: What, why, and how.
+---
+
+Hello World! Or "Hello, World!". Perhaps "Hello world.". Hello? Anyone?
+
+Welcome to my page and to the genesis of this blog. I write here about anything that comes to my mind. This blog is an extension to the page of ideas I have had. Here I want to have a free space or scratchpad to roam with my thoughts that I would like to expand upon. There are essentially three stages an idea in the head of an academic can take: a simple idea in the form of a fleeting thought, a blog post with an expansion of the idea's surroundings, or an actual research article when things get serious. Of course, academia does not allow one to roam wherever they want with research ("it's the economy, stupid"; perhaps more on this later), so most *art brut* ideas worth pursuing are bound to die at the level of a blog post.
+
+As a person, I am interested in the world around us. To not make this sentence a corny tautology, I would like to expand on that, but not in this blog post, for the margins of this webpage are too small for that; test them though, the effects are quite nice! 
+
+I hope you like my blog posts, should anything ever come out of them outside this mandatory Welcome-post. Since comments run on giscus, commenting requires you to have a GitHub account. Sorry for the inconvenience, perhaps I migrate at some point. The codebase should be easily portable anywhere else, but let not the perfect kill the good. Of course, most of this page has been conceived by modern chatbots (in particular, Claude Fable 5.1 with the workflows I have built around everything I do), so porting should be a few prompts and a cup of coffee.
+
+As you might note, I am quite invested in the AI-business, albeit not so much from an actual investment side, but mentally. Some might claim that even when something does happen, nothing really happens. However, I believe that this time is actually different, and that we have entered a new age, akin to what the computers started doing around 40 years ago to society. The stock market and related horse races might be bubblemaxxed by design, but that makes no difference. The tech exists, and will not disappear (more on this later in various instances). Don't get me wrong though; AI is by no means the only thing I think and write about.
+
+As a final remark, I want to discuss how the animations on this page work. Disclaimer: I am a physicist, but not a web developer. The animations are built purely by Claude based on my instructions on what kind of effects to include. The explanations written below are mostly by Claude, and to be honest, I have next to no idea if these features are correctly implemented in code.
+
+So, since I am a holographer, the light and dark themes are obvious candidates for duality. On the dark side, you have (for obvious reasons) the world of gravity, on the light side, particle physics (I guess it should be QED to be especially "light").
+
+In the light theme you click, and a bubble chamber-style reaction takes place. Note that space stays a solid grid. A beam particle comes in along a straight track and hits a proton at rest, and the reaction is written above the vertex: the events are drawn from a table of sixteen real ones. The chamber sits in a uniform magnetic field pointing out of the screen; the radius of curvature is proportional to momentum divided by charge, fast particles run almost straight and slow ones curl up. The photon borrows Feynman's wavy line even though this is position space. A photon may convert into an electron-positron pair that emerges tangent to it, a neutral kaon travels unseen and then decays into two charged tracks forming a V, a charged pion or kaon can decay in flight, which shows up as a kink with the neutrino leaving faintly, and the beam itself sometimes knocks an electron out of an atom, the tightly curled delta ray. The momenta and decay lengths are drawn from simple distributions chosen to look right at this scale, not from an actual experiment.
+
+In the dark theme the grid is a slice of spacetime itself, drawn the way embedding diagrams draw it. Around the page you can find wells, underdense voids that push the grid apart, a patch of tidal shear, and cosmic strings. One object is a gravitational wave travelling along your line of sight, stretching and squeezing the cells in the plus-polarised pattern with an amplitude some twenty orders of magnitude beyond anything a detector has seen. And one is a binary that lives on a ninety-second clock. Underneath it all lies a faint cosmic web: the grid points have been displaced by the gradient of a random potential, which is the Zel'dovich approximation to how matter in the early universe first flowed into filaments and away from voids. Clicking lets you add to the geometry: drop a well or carve a void, each announcing itself with a quadrupolar wavefront, since the quadrupole is the lowest multipole that radiates gravitationally.
+
+None of this is meant to teach anything serious, but of course, since we are all nerds here, if you spot something scientifically (seriously) inaccurate, the source is public and you can always send a pull request.
+
+Once more, welcome to this stream of consciousness, hope you like it!

@@ -1,0 +1,36 @@
+{{ define "main" }}
+<header class="page-head">
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}<p class="lead">{{ $.RenderString . }}</p>{{ end }}
+</header>
+<div class="content">{{ .Content }}</div>
+{{- $reading := hugo.Data.reading }}
+{{- $sections := slice }}
+{{- range $reading.sections }}{{ if .items }}{{ $sections = $sections | append . }}{{ end }}{{ end }}
+{{- if .RegularPages }}
+  <h2 class="section-title">Open problems</h2>
+  {{ partial "post-list.html" .RegularPages }}
+{{- else if not $sections }}
+<p class="muted">No entries yet.</p>
+{{- end }}
+{{- with $sections }}
+<section class="reading">
+  <h2 class="section-title">{{ $reading.title | default "Reading list" }}</h2>
+  {{- with $reading.intro }}<p>{{ . | markdownify }}</p>{{ end }}
+  {{- range . }}
+  <h3 class="reading-head">{{ .title }}</h3>
+  <ul class="reading-list">
+    {{- range .items }}
+    {{- $item := . }}{{ $fig := "" }}{{ with .image }}{{ $fig = resources.Get . }}{{ end }}
+    <li{{ if $fig }} class="has-figure"{{ end }}>
+      <a href="{{ .url }}">{{ .title }}</a>
+      {{- if or .by .year }} <span class="reading-meta">{{ .by }}{{ if and .by .year }}, {{ end }}{{ .year }}</span>{{ end }}
+      {{- with .note }}<p>{{ . | markdownify }}</p>{{ end }}
+      {{- with $fig }}{{ $t := .Fit "420x420 q85" }}<a class="figure" href="{{ $item.url }}" tabindex="-1" aria-hidden="true"><img src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}" alt="" loading="lazy"></a>{{ end }}
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+</section>
+{{- end }}
+{{ end }}

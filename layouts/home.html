@@ -1,0 +1,29 @@
+{{ define "main" }}
+<section class="hero">
+  <div>
+    <h1>{{ site.Params.author }}</h1>
+    <p class="lead">{{ site.Params.role }}{{ with site.Params.affiliation }} · {{ . }}{{ end }}</p>
+    {{- with site.Params.now }}
+    <p class="now"><span class="now-label">Currently</span>{{ . | markdownify }}</p>
+    {{- end }}
+  </div>
+  {{- with or (resources.Get "images/portrait.jpg") (resources.Get "images/portrait.png") }}
+  {{- $img := .Fill "400x400 q85 jpg" }}
+  <img class="portrait" src="{{ $img.RelPermalink }}" width="200" height="200" alt="{{ site.Params.author }}">
+  {{- end }}
+</section>
+<div class="content">
+  {{ .Content }}
+</div>
+<p class="elsewhere">
+  {{- range $i, $l := site.Params.links }}{{ if $i }} · {{ end }}<a href="{{ $l.url }}" rel="me">{{ $l.name }}</a>{{ end }}
+  {{- with site.Params.email }} · <a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+</p>
+{{- with (where site.RegularPages "Section" "blog") | first 3 }}
+<section class="recent">
+  <h2 class="section-title">Recent posts</h2>
+  {{ partial "post-list.html" . }}
+  <p class="muted small"><a href="/blog/">All posts →</a></p>
+</section>
+{{- end }}
+{{ end }}

@@ -1,0 +1,19 @@
+<footer class="site-footer wrap">
+  <span>© {{ now.Year }} {{ site.Params.author }}</span>
+  <span class="footer-links">
+    {{- range site.Params.links }}<a href="{{ .url }}" rel="me">{{ .name }}</a>{{ end -}}
+    {{- with site.Params.email }}<a href="mailto:{{ . }}">Email</a>{{ end -}}
+    <a href="/blog/index.xml">RSS</a>
+  </span>
+  <p class="colophon">Set in Source Serif 4 and Inter, built with Hugo. No analytics.</p>
+</footer>
+<script>
+  document.querySelector(".theme-toggle").addEventListener("click", function () {
+    var root = document.documentElement;
+    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("theme", next); } catch (e) {}
+    var giscus = document.querySelector("iframe.giscus-frame");
+    if (giscus) giscus.contentWindow.postMessage({ giscus: { setConfig: { theme: next } } }, "https://giscus.app");
+  });
+</script>

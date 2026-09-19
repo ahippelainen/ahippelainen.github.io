@@ -1,0 +1,76 @@
+baseURL: https://hippe.fi/
+locale: en
+title: Antti Hippeläinen
+timeZone: Europe/Helsinki
+enableRobotsTXT: true
+disableKinds: [taxonomy, term]
+
+params:
+  author: Antti Hippeläinen
+  description: Theoretical physicist working on holographic duality.
+  role: Theoretical physicist
+  affiliation: University of Helsinki
+  email: ""    
+  now: ""
+  links:
+    - name: INSPIRE
+      url: https://inspirehep.net/authors/2614263
+    - name: arXiv
+      url: "https://arxiv.org/search/?searchtype=author&query=Hippel%C3%A4inen%2C+A"
+    - name: GitHub
+      url: https://github.com/ahippelainen
+    - name: ORCID
+      url: https://orcid.org/0000-0002-6129-6568
+  comments:
+    repo: ahippelainen/ahippelainen.github.io
+    repoId: "R_kgDOUir47g"
+    category: Announcements
+    categoryId: "DIC_kwDOUir47s4DGBsC"
+
+menus:
+  main:
+    - name: Research
+      pageRef: /research
+      weight: 10
+    - name: Projects
+      pageRef: /projects
+      weight: 15
+    - name: Ideas & TODO
+      pageRef: /ideas
+      weight: 20
+    - name: Blog
+      pageRef: /blog
+      weight: 30
+
+outputs:
+  home: [HTML]
+  section: [HTML, RSS]
+  page: [HTML]
+
+markup:
+  goldmark:
+    parser:
+      wrapStandAloneImageWithinParagraph: false
+    renderer:
+      unsafe: false          # raw HTML in Markdown is dropped; flip only if a post really needs it
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+            - ['\[', '\]']
+            - ['$$', '$$']
+          inline:
+            - ['\(', '\)']
+            - ['$', '$']
+  highlight:
+    noClasses: false
+    lineNos: false
+
+privacy:
+  disqus: {disable: true}
+  googleAnalytics: {disable: true}
+  instagram: {disable: true}
+  x: {disable: true}
+  vimeo: {disable: true}
+  youtube: {privacyEnhanced: true}

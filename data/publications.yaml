@@ -1,0 +1,49 @@
+# One entry per paper, newest first. Optional `image: images/papers/<arxiv>.png` (a file under assets/) shows a
+# figure beside the entry; /illustrate can pick one from the arXiv source.
+- title: Measuring inequality and social stratification with Lorenz curvature
+  authors: [Antti Hippeläinen]
+  year: 2026
+  image: images/papers/2607.22110.png
+  venue: 
+  arxiv: "2607.22110"
+  note: >
+    The Lorenz curve is the standard picture of an income distribution, and its curvature turns out to define a whole family of inequality and stratification indices, labelled by a stratification-aversion parameter. In particular, curvature is largest where the income density is thin, in the gaps between concentrations of people, so increasing stratification-aversion increases society's aversion to the existence of class boundaries.  
+    
+    
+    I work out which of the usual inequality axioms the family satisfies (strictly, only at parameter zero, where the index also has a simple closed form) and run it on World Bank data to see how country rankings move as the parameter changes and how the index correlates with the familiar ones. It deviates from them consistently, less so for consumption-based than for income-based data.
+
+- title: Formalization of the generalized Pareto principle and structural typicality of the 20/80-rule
+  authors: [Antti Hippeläinen]
+  year: 2026
+  image: images/papers/2602.11131.png
+  venue: 
+  arxiv: "2602.11131"
+  note: >
+    The Pareto principle, "a fraction *p* of inputs yields a fraction 1 − *p* of outputs", is quoted everywhere and rarely truly qualified nor quantified. I decided to formalise it as a property of a gain density on the unit interval; for probability distributions *p* is one minus the Kolkata index of the Lorenz curve, such that the connection to inequality literature is natural and immediate.
+    
+
+    Closed forms follow for truncated power-law, exponential, and normal families, and combined with how the truncation scales with sample size they predict that "standard-sized" datasets with a hundred to a hundred thousand points from the exponential and normal families land near the canonical 0.2/0.8 split naturally. The paper closes with what that ubiquity means for using the rule as a prescriptive target.
+
+- title: Gravitational form factors of the proton in the improved holographic QCD model
+  authors: [Antti Hippeläinen, Niko Jokela, Matti Järvinen]
+  year: 2026
+  image: images/papers/2601.14939.png
+  venue: 
+  arxiv: "2601.14939"
+  inspire: 3109800
+  note: >
+    Gravitational form factors are the scalar coefficients in the matrix elements of the energy–momentum tensor; they encode, through classical analogies, the distributions of energy, pressure, shear forces and spin density inside a particle. 
+    
+
+    We computed the gluonic contribution in improved holographic QCD, a bottom-up model whose parameters are constrained by lattice and phenomenological input, with the proton described by bulk Dirac fermions. The mechanical and mass radii land at about 0.95 fm and 0.61 fm, in line with other nonperturbative approaches.
+
+- title: Higgs phases at non-zero density from holography
+  authors: [Oscar Henriksson, Antti Hippeläinen, Carlos Hoyos, Niko Jokela, Aleksi Piispa]
+  year: 2023
+  image: images/papers/2212.07364.png
+  venue: JHEP 08 (2023) 186
+  arxiv: "2212.07364"
+  doi: 10.1007/JHEP08(2023)186
+  inspire: 2614262
+  note: >
+    At high enough density a gauge theory can end up in a Higgs phase, and in top-down holographic models that is expected to show up as colour branes nucleating into the bulk. We mimic that flow with codimension-one branes that source form flux, placed in a bottom-up gravity dual so that the effective curvature radius changes when the brane is crossed. That gives an analytic way to describe Higgs phases at non-zero density.

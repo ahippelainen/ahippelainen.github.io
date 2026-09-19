@@ -1,0 +1,23 @@
+{{ define "main" }}
+<article>
+  <header class="article-header">
+    <h1>{{ .Title }}</h1>
+    <p class="meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+      {{- with .Params.status }} · <span class="tag tag-{{ . }}">{{ . }}</span>{{ end }}
+      {{- if eq .Section "blog" }} · {{ .ReadingTime }} min read{{ end }}
+    </p>
+    {{- with .Description }}
+    <p class="lead">{{ $.RenderString . }}</p>
+    {{- end }}
+    {{- if or .Params.repo .Params.link }}
+    <p class="meta project-links">
+      {{- with .Params.repo }}<a href="{{ . }}">Source code</a>{{ end }}
+      {{- with .Params.link }}{{ if $.Params.repo }} · {{ end }}<a href="{{ . }}">{{ . | replaceRE "^https?://(www\\.)?" "" | replaceRE "/$" "" }}</a>{{ end }}
+    </p>
+    {{- end }}
+  </header>
+  <div class="content">{{ .Content }}</div>
+</article>
+{{ partial "comments.html" . }}
+{{ end }}

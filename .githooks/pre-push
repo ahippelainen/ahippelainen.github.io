@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Enforced by git itself (core.hooksPath = .githooks): every commit being pushed must be the one
+# /publish reviewed, recorded in .publish-ok. Set up once per clone: git config core.hooksPath .githooks
+ok=$(cat "$(git rev-parse --show-toplevel)/.publish-ok" 2>/dev/null)
+while read -r _ local_sha _ _; do
+  [[ -n "$ok" && "$local_sha" == "$ok" ]] && continue
+  echo "pre-push: refusing to push $local_sha; the reviewed commit is ${ok:-none}. Run /publish." >&2
+  exit 1
+done
+exit 0

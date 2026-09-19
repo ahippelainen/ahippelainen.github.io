@@ -1,0 +1,31 @@
+{{- $noop := .WordCount -}}{{/* forces content render so the math flag is set before head is emitted */}}
+{{- if not .IsPage }}{{ range .RegularPages }}{{ if findRE `[$\\]` .Description }}{{ $.Store.Set "hasMath" true }}{{ end }}{{ end }}{{ end }}
+{{- if findRE `[$\\]` .Description }}{{ .Store.Set "hasMath" true }}{{ end }}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{- $title := .Title }}{{ if not .IsHome }}{{ $title = printf "%s · %s" .Title site.Title }}{{ end }}
+<title>{{ $title }}</title>
+{{- $desc := .Description | default site.Params.description }}
+<meta name="description" content="{{ $desc }}">
+<meta name="author" content="{{ site.Params.author }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+{{- with partial "thumb.html" . }}{{ $og := .Fill "1200x630 q85" }}
+<meta property="og:image" content="{{ $og.Permalink }}">
+{{- end }}
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+{{- with .OutputFormats.Get "rss" }}
+<link rel="alternate" type="application/rss+xml" title="{{ $.Title }} · {{ site.Title }}" href="{{ .Permalink }}">
+{{- end }}
+{{- /* apply a remembered theme before the first paint */}}
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+{{- $css := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- if .Page.Store.Get "hasMath" }}
+<link rel="stylesheet" href="/katex/katex.min.css">
+{{- end }}

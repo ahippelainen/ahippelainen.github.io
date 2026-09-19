@@ -1,0 +1,9 @@
+{{- /* Returns the page's thumbnail image resource, or nothing.
+       A file named cover.* next to index.md wins; otherwise the first raster image in the folder. */ -}}
+{{- $img := .Resources.GetMatch "cover.{jpg,jpeg,png,webp}" -}}
+{{- if not $img -}}
+  {{- range .Resources.ByType "image" -}}
+    {{- if and (not $img) (ne .MediaType.SubType "svg") }}{{ $img = . }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $img -}}

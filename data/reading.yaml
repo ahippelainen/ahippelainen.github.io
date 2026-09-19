@@ -1,0 +1,31 @@
+title: To read and watch
+intro: >
+  Papers, books, lectures and films I want to get through properly some day and keep losing track of. Listed here so that I stop losing them, with a line on what each one is and why it is on the list.
+  
+sections:
+
+  - title: Papers
+    items:
+      - title: Massive Gravity
+        url: https://arxiv.org/abs/1401.4173
+        by: Claudia de Rham
+        year: 2014
+        note: Could gravity be massive?
+
+  - title: Books
+    items: []
+
+  - title: Lectures and videos
+    items: 
+      - title: Lectures on the Geometric Anatomy of Theoretical Physics
+        url: https://www.youtube.com/playlist?list=PLPH7f_7ZlzxTi6kS4vCmv4ZKm9u8g5yic
+        by: Frederic Schuller
+        year: 2016
+        note: On the mathematical foundations of the field we all love.
+
+  - title: Films and series
+    items: 
+      - title: The Greatest Films of All Time
+        url: https://www.bfi.org.uk/sight-and-sound/greatest-films-all-time
+        by: BFI and various authors
+        note: The list to feed my moderate love of movies. 

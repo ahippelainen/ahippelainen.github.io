@@ -1,0 +1,25 @@
+{{- /* Every Markdown image becomes a <figure>. Images stored next to the post are resized to sensible
+       widths and served with a srcset; the optional title text becomes the caption:
+       ![alt text](photo.jpg "Caption in *Markdown*") */ -}}
+{{- $img := .Page.Resources.GetMatch .Destination -}}
+{{- if and $img (ne $img.MediaType.SubType "svg") -}}
+  {{- $set := slice -}}
+  {{- range slice 800 1600 -}}
+    {{- if lt . $img.Width }}{{ $set = $set | append ($img.Resize (printf "%dx q85" .)) }}{{ end -}}
+  {{- end -}}
+  {{- if le $img.Width 1600 }}{{ $set = $set | append $img }}{{ end -}}
+  {{- $first := index $set 0 -}}
+  <figure>
+    <img src="{{ $first.RelPermalink }}"
+         srcset="{{ range $i, $r := $set }}{{ if $i }}, {{ end }}{{ $r.RelPermalink }} {{ $r.Width }}w{{ end }}"
+         sizes="(max-width: 42rem) 100vw, 42rem"
+         width="{{ $first.Width }}" height="{{ $first.Height }}"
+         alt="{{ .PlainText }}" loading="lazy" decoding="async">
+    {{- with .Title }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+  </figure>
+{{- else -}}
+  <figure>
+    <img src="{{ .Destination | safeURL }}" alt="{{ .PlainText }}" loading="lazy" decoding="async">
+    {{- with .Title }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+  </figure>
+{{- end -}}

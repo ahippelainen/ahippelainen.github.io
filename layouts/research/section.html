@@ -1,0 +1,34 @@
+{{ define "main" }}
+<header class="page-head">
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}<p class="lead">{{ $.RenderString . }}</p>{{ end }}
+</header>
+<div class="content">{{ .Content }}</div>
+<h2 class="section-title">Papers</h2>
+<div class="pubs">
+  {{- $prev := 0 }}
+  {{- range hugo.Data.publications }}
+  {{- if ne .year $prev }}
+  <h2 class="pub-year">{{ .year }}</h2>
+  {{- $prev = .year }}
+  {{- end }}
+  {{- $item := . }}{{ $fig := "" }}{{ with .image }}{{ $fig = resources.Get . }}{{ end }}
+  <article class="pub{{ if $fig }} has-figure{{ end }}">
+    <h3 class="pub-title">
+      {{- if .arxiv }}<a href="https://arxiv.org/abs/{{ .arxiv }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end -}}
+    </h3>
+    <p class="pub-authors">
+      {{- range $i, $a := .authors }}{{ if $i }}, {{ end }}{{ $a }}{{ end -}}
+    </p>
+    <p class="pub-venue">
+      {{- .venue }}{{ if not (in .venue (string .year)) }} ({{ .year }}){{ end }}
+      {{- with .arxiv }} · <a href="https://arxiv.org/abs/{{ . }}">arXiv:{{ . }}</a>{{ end }}
+      {{- with .doi }} · <a href="https://doi.org/{{ . }}">DOI</a>{{ end }}
+      {{- with .inspire }} · <a href="https://inspirehep.net/literature/{{ . }}">INSPIRE</a>{{ end -}}
+    </p>
+    {{- with .note }}<div class="pub-note">{{ . | markdownify }}</div>{{ end }}
+    {{- with $fig }}{{ $t := .Fit "540x540 q85" }}<a class="figure" href="https://arxiv.org/abs/{{ $item.arxiv }}" tabindex="-1" aria-hidden="true"><img src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}" alt="" loading="lazy"></a>{{ end }}
+  </article>
+  {{- end }}
+</div>
+{{ end }}

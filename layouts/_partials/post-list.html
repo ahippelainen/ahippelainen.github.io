@@ -1,0 +1,30 @@
+{{- /* expects a page collection; renders date, title, description, optional project links, optional thumbnail */ -}}
+{{- if . }}
+<ul class="post-list">
+  {{- range . }}
+  {{- $p := . }}
+  {{- $thumb := partial "thumb.html" $p }}
+  <li{{ if $thumb }} class="has-thumb"{{ end }}>
+    <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "2 Jan 2006" }}</time>
+    <div>
+      <a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+      {{- with $p.Params.status }} <span class="tag tag-{{ . }}">{{ . }}</span>{{ end }}
+      {{- with $p.Description }}<p>{{ $p.RenderString . }}</p>{{ end }}
+      {{- if or $p.Params.repo $p.Params.link $p.Params.tags }}
+      <p class="project-meta">
+        {{- with $p.Params.repo }}<a href="{{ . }}">Source</a>{{ end }}
+        {{- with $p.Params.link }}{{ if $p.Params.repo }} · {{ end }}<a href="{{ . }}">Link</a>{{ end }}
+        {{- with $p.Params.tags }}{{ if or $p.Params.repo $p.Params.link }} · {{ end }}{{ delimit . ", " }}{{ end }}
+      </p>
+      {{- end }}
+    </div>
+    {{- with $thumb }}
+    {{- $t := .Fill "160x160 q85" }}
+    <a class="thumb" href="{{ $p.RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="{{ $t.RelPermalink }}" width="80" height="80" alt="" loading="lazy"></a>
+    {{- end }}
+  </li>
+  {{- end }}
+</ul>
+{{- else }}
+<p class="muted">No entries yet.</p>
+{{- end }}
