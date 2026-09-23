@@ -1,5 +1,5 @@
 ---
-title: Projects
-description: Cool stuff I or someone else has built!
+title: Projects & stuff
+description: Cool things collected into one place!
 outputs: [html]
 ---
