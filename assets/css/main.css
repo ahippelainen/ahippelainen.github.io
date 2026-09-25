@@ -195,6 +195,11 @@ p { margin: 0 0 1.1em; }
 .content table { border-collapse: collapse; width: 100%; margin: 1.4em 0; font-size: 0.95rem; }
 .content th, .content td { text-align: left; padding: 0.45em 0.6em; border-bottom: 1px solid var(--rule); }
 .content th { font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+/* wide tables scroll inside the column instead of widening the page; values like "131.4 ± 5.7" never break */
+.content .table-wrap { overflow-x: auto; margin: 1.4em 0; }
+.content .table-wrap table { margin: 0; }
+.content td { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.content td:first-child { white-space: normal; min-width: 9em; }
 .content sup { line-height: 0; }
 .footnotes { margin-top: 3em; font-size: 0.9rem; color: var(--muted); }
 .footnotes hr { display: none; }
