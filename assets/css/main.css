@@ -149,7 +149,7 @@ p { margin: 0 0 1.1em; }
 .post-list p { margin: 0.25em 0 0; color: var(--muted); font-size: 0.95rem; }
 .post-list li.has-thumb { grid-template-columns: 6.6rem 1fr auto; }
 .post-list .thumb { grid-column: 3; grid-row: 1; align-self: start; margin-top: 0.15rem; }
-.post-list .thumb img { display: block; width: 4.4rem; height: 4.4rem; border-radius: 6px; object-fit: cover; }
+.post-list .thumb img { display: block; width: auto; height: 4.4rem; border-radius: 6px; }
 .post-list .project-meta { font-family: var(--sans); font-size: 0.78rem; margin-top: 0.4em; }
 .post-list .project-meta a { font-size: inherit; font-weight: 500; color: var(--muted); text-decoration: underline; text-decoration-color: var(--rule); }
 .post-list .project-meta a:hover { color: var(--accent); }
@@ -160,6 +160,7 @@ p { margin: 0 0 1.1em; }
   .post-list li.has-thumb time { grid-column: 1; grid-row: 1; }
   .post-list li.has-thumb > div { grid-column: 1; grid-row: 2; }
   .post-list .thumb { grid-column: 2; grid-row: 1 / span 2; }
+  .post-list .thumb img { height: 3.4rem; }
 }
 
 .tag { display: inline-block; vertical-align: middle; font-family: var(--sans); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); border-radius: 999px; padding: 0.1em 0.55em; margin-left: 0.4em; }

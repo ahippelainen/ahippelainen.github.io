@@ -19,8 +19,10 @@
       {{- end }}
     </div>
     {{- with $thumb }}
-    {{- $t := .Fill "160x160 q85" }}
-    <a class="thumb" href="{{ $p.RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="{{ $t.RelPermalink }}" width="80" height="80" alt="" loading="lazy"></a>
+    {{- /* keep the image's own shape, clamped between square and 2:1, so wide figures show whole */ -}}
+    {{- $w := math.Round (mul 88 (math.Max 1 (math.Min 2 (div (float .Width) .Height)))) | int }}
+    {{- $t := .Fill (printf "%dx176 q85" (mul $w 2)) }}
+    <a class="thumb" href="{{ $p.RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="{{ $t.RelPermalink }}" width="{{ $w }}" height="88" alt="" loading="lazy"></a>
     {{- end }}
   </li>
   {{- end }}
