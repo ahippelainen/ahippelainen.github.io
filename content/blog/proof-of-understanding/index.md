@@ -90,7 +90,7 @@ A further objection is that all of this is about mathematics, and I agree that t
 
 Feynman's blackboard had a second line below the more famous one: "Know how to solve every problem that has been solved." In the proof economy that looked like a goal for a starting student, to understand their field from the bottom up, with the prestige reserved for the problems nobody had solved. If the machines keep solving problems in increasing amounts, knowing how to solve problems that have already been solved might become the game in its entirety. For an age of proof abundance, what I cannot explain, I do not understand, and what no human can explain, we do not understand. Understanding could become a strange, almost an inverted type of currency: scarce because it takes time to produce, yet growing every time somebody spends it.
 
-See also the final post in this series: [to appear].
+See also the final post in this series: [ζ₃(5) is irrational...maybe.](/blog/zeta3-5-is-irrational-maybe/)
 
 [^openai-ns]: OpenAI, "On the Navier–Stokes Millennium Prize Problem" (8 September 2026, updated 10 September), <https://openai.com/index/navier-stokes-solution/>; the paper "Finite Time Blowup for Navier–Stokes", <https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf>; the Lean certificates, <https://github.com/openai/NavierStokesAndEuler>. Clay Mathematics Institute, statement of 11 September 2026, <https://www.claymath.org/news/navier-stokes-announcement/>.
 [^quanta-ns]: K. Kakaes, "AI Has Solved One of Math's \$1 Million Millennium Prize Problems", *Quanta Magazine* (8 September 2026), <https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/>.
