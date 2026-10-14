@@ -2,6 +2,7 @@
 title: "Saturating Finnish high school maths"
 date: 2026-09-24
 description: How fast could modern AI graduate from high school?
+tags: [experiments, "AI capabilities", education, "physics for fun"]
 ---
 
 ![Exam score against time budget for every model at low effort on the 2026 exam, with the human record](cover.png "Every model at low effort on the 2026 exam: the mean exam score out of 120 against the time budget, from 5 seconds to 12 minutes on a logarithmic axis. Blue is Haiku 4.5, orange Sonnet 5, green Opus 5.5 and yellow Fable 5.1; dashed lines are thinking off. The dotted line is the human record, 63 points in 12 minutes (the star).")

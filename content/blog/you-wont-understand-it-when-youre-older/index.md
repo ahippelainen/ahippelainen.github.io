@@ -2,6 +2,7 @@
 title: "You won't understand it when you're older"
 date: 2026-10-01
 description: What is the human condition of automating our thinking?
+tags: [understanding, society, "human role", "future scenarios"]
 ---
 
 I remember the COVID scenarios from the spring of 2020. The real outcome was always going to lie somewhere on a continuum, but the proposed scenarios came as discrete options: many die and the virus burns out; the virus keeps mutating, many still die and restrictions last for years; and finally the one that sounded least dramatic, that it is going to be tough for a while and then the virus lingers in society forever as something we have adapted to. The last one is (roughly) where we ended up. In the discussion about AI, I feel we are missing that option. The studies in which experts and superforecasters estimate the odds of AI destroying us[^xpt] age incredibly fast, and that consensus has shifted within the last months alone. We can and should act to steer away from the worst cases, but I read these forecasts mostly as signs of the times in which they were made, later to be studied by historians.

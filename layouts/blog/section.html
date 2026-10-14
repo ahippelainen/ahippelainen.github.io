@@ -1,0 +1,35 @@
+{{ define "main" }}
+<header class="page-head">
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}<p class="lead">{{ $.RenderString . }}</p>{{ end }}
+</header>
+<div class="content">{{ .Content }}</div>
+{{- $pages := .RegularPages }}
+{{- $names := dict }}{{ $counts := dict }}{{ $words := 0 }}
+{{- range $pages }}
+  {{- $words = add $words .WordCount }}
+  {{- range .Params.tags }}
+    {{- $k := urlize . }}
+    {{- $names = merge $names (dict $k .) }}
+    {{- $counts = merge $counts (dict $k (add 1 (index $counts $k | default 0))) }}
+  {{- end }}
+{{- end }}
+{{- $tags := slice }}
+{{- range $k, $n := $counts }}{{ if ge $n 2 }}{{ $tags = $tags | append (dict "slug" $k "name" (index $names $k) "n" $n) }}{{ end }}{{ end }}
+<h2 class="section-title">{{ .Params.list_title | default "Entries" }}</h2>
+{{- with $pages }}
+<p class="blog-stats small muted">{{ len . }} posts · {{ lang.FormatNumber 0 $words }} words · since {{ (index .ByDate 0).Date.Format "January 2006" }}</p>
+{{- end }}
+{{- with $tags }}
+<nav class="tag-bar" aria-label="Filter posts by theme">
+  <button type="button" class="tag tag-reset" disabled>reset</button>
+  {{- range sort (sort . "name") "n" "desc" }}
+  <button type="button" class="tag" data-tag="{{ .slug }}" aria-pressed="false">{{ .name }} <span class="count">{{ .n }}</span></button>
+  {{- end }}
+  <span class="tag-status small muted" aria-live="polite"></span>
+</nav>
+{{- $js := resources.Get "js/tags.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{- end }}
+{{ partial "post-list.html" $pages }}
+{{ end }}

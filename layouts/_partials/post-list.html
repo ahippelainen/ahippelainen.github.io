@@ -4,13 +4,19 @@
   {{- range . }}
   {{- $p := . }}
   {{- $thumb := partial "thumb.html" $p }}
-  <li{{ if $thumb }} class="has-thumb"{{ end }}>
+  {{- $blog := eq $p.Section "blog" }}
+  {{- $tags := cond $blog (partial "visible-tags.html" $p) slice }}
+  {{- $slugs := slice }}{{ range $tags }}{{ $slugs = $slugs | append (urlize .) }}{{ end }}
+  <li{{ if $thumb }} class="has-thumb"{{ end }}{{ if $blog }} data-tags="{{ delimit $slugs " " }}"{{ end }}>
     <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "2 Jan 2006" }}</time>
     <div>
       <a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
       {{- with $p.Params.status }} <span class="tag tag-{{ . }}">{{ . }}</span>{{ end }}
       {{- with $p.Description }}<p>{{ $p.RenderString . }}</p>{{ end }}
-      {{- if or $p.Params.repo $p.Params.link $p.Params.tags }}
+      {{- if $blog }}{{ with $tags }}
+      <p class="project-meta">{{ range $i, $t := . }}{{ if $i }} · {{ end }}<a href="/blog/#tag={{ urlize $t }}">{{ $t }}</a>{{ end }}</p>
+      {{- end }}
+      {{- else if or $p.Params.repo $p.Params.link $p.Params.tags }}
       <p class="project-meta">
         {{- with $p.Params.repo }}<a href="{{ . }}">Source</a>{{ end }}
         {{- with $p.Params.link }}{{ if $p.Params.repo }} · {{ end }}<a href="{{ . }}">Link</a>{{ end }}

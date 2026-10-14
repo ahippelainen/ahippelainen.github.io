@@ -2,6 +2,7 @@
 title: "Hello World!"
 date: 2026-09-20
 description: What, why, and how.
+tags: [meta, personal, "physics for fun"]
 ---
 
 Hello World! Or "Hello, World!". Perhaps "Hello world.". Hello? Anyone?

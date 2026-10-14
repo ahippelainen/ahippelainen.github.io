@@ -7,6 +7,7 @@
       {{- with .Params.status }} · <span class="tag tag-{{ . }}">{{ . }}</span>{{ end }}
       {{- if eq .Section "blog" }} · {{ .ReadingTime }} min read{{ end }}
     </p>
+    {{- if eq .Section "blog" }}{{ partial "tags.html" . }}{{ end }}
     {{- with .Description }}
     <p class="lead">{{ $.RenderString . }}</p>
     {{- end }}

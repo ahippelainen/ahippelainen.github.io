@@ -1,0 +1,5 @@
+{{- /* the page's tags that at least two blog posts share */ -}}
+{{- $c := partialCached "tag-counts.html" . "blog" -}}
+{{- $v := slice -}}
+{{- range .Params.tags }}{{ if ge (index $c (urlize .) | default 0) 2 }}{{ $v = $v | append . }}{{ end }}{{ end -}}
+{{- return $v -}}

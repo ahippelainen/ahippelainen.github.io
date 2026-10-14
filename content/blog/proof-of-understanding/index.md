@@ -2,6 +2,7 @@
 title: "Proof of understanding"
 date: 2026-10-02
 description: "How to recalibrate our sense of academic value?"
+tags: [understanding, "academic values", "credit and ownership", "thought experiments", "AI in research"]
 ---
 
 See also the previous post: [You won't understand it when you're older](/blog/you-wont-understand-it-when-youre-older/)
@@ -9,6 +10,8 @@ See also the previous post: [You won't understand it when you're older](/blog/yo
 On 8 September, OpenAI announced a proof that the Navier–Stokes equations, which describe the flow of viscous fluids, can develop a singularity in finite time in three dimensions when the fluid is forced smoothly. The proof was found/constructed by O(10⁴) AI agents running on OpenAI's internal model during 8 days for altogether around 100 hours[^openai-ns], at a computational cost of several million dollars[^quanta-ns]. Whether the Lean formalization is correct or not (true to the theme of this post, who knows) is not really the question here, but that of how should we value a proof that only modern-day math preachers, readers of the holy scripture of Lean, can understand.
 
 When Richard Feynman died in 1988, his blackboard at Caltech still had the line "What I cannot create, I do not understand" in its top left corner[^feynman]. I would consider it as a measure of intellectual honesty, as a method for teaching yourself and knowing what you can and cannot do: rebuild a result yourself to truly understand it. I feel academia has long relied on the converse, that whoever created a proof also understands it, and with the proof has contributed to our collective understanding as well. Logically, the converse never followed, but it was a reasonable bet as long as creating the proof was the hard part. Now that machines create too, I think the bet is off, and so is the currency academia pays itself in.
+
+![Black-and-white photograph of a chalk-covered blackboard. Top left, boxed: "What I cannot create, I do not understand." Below it, boxed: "Know how to solve every problem that has been solved". On the right, a list headed "To learn" (Bethe Ansatz Probs., Kondo, 2-D Hall, accel. temp, non-linear classical hydro) and some formulas.](feynman-blackboard.jpg "Richard Feynman's blackboard at Caltech at the time of his death, 1988. Courtesy of the Caltech Archives and Special Collections (image 1.10-29).")
 
 In the previous post I considered if the bad ending of the age of mass AI could be a society that no human understands well enough. Borrowing from the protocols cryptocurrencies use to prove a contribution, let us do a thought experiment on a protocol that pays for understanding instead of output, a *proof of understanding*. I focus on academia, and on mathematics in particular, because there the transition has already visibly begun.
 

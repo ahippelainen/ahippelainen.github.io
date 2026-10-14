@@ -140,9 +140,8 @@ p { margin: 0 0 1.1em; }
 .recent { margin-top: 2.6rem; }
 
 /* lists of posts / projects / ideas */
-.post-list { list-style: none; padding: 0; margin: 1.6rem 0; }
+.post-list { list-style: none; padding: 0; margin: 1.6rem 0; border-bottom: 1px solid var(--rule); }
 .post-list li { display: grid; grid-template-columns: 6.6rem 1fr; gap: 0.6rem 1rem; padding: 0.85rem 0; border-top: 1px solid var(--rule); }
-.post-list li:last-child { border-bottom: 1px solid var(--rule); }
 .post-list time { font-family: var(--sans); font-size: 0.78rem; color: var(--muted); padding-top: 0.35em; white-space: nowrap; }
 .post-list a { font-size: 1.1rem; font-weight: 600; color: var(--fg); text-decoration: none; }
 .post-list a:hover { color: var(--accent); }
@@ -165,6 +164,21 @@ p { margin: 0 0 1.1em; }
 
 .tag { display: inline-block; vertical-align: middle; font-family: var(--sans); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); border-radius: 999px; padding: 0.1em 0.55em; margin-left: 0.4em; }
 .tag-open { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 40%, transparent); }
+
+/* blog theme tags: pills under a post's meta line and in lists; on the blog page they filter the list */
+.tags { margin: 0.5em 0 0; line-height: 1.9; }
+a.tag { text-decoration: none; margin: 0 0.35em 0 0; }
+a.tag:hover { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 40%, transparent); }
+.blog-stats { margin: -0.3rem 0 0.6rem; }
+.tag-bar { line-height: 2.1; }
+.tag-bar .count { opacity: 0.65; margin-left: 0.15em; }
+.tag-bar button.tag { background: none; cursor: pointer; margin: 0 0.35em 0 0; line-height: inherit; }
+.tag-bar button.tag:hover:not(:disabled) { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 40%, transparent); }
+.tag-bar button.tag[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); }
+.tag-bar .tag-reset { border-style: dashed; }
+.tag-bar .tag-reset:disabled { opacity: 0.45; cursor: default; }
+.tag-status { margin-left: 0.3em; }
+.post-list li[hidden] { display: none; }
 
 /* reading list (ideas page) */
 .reading { margin-top: 3rem; }

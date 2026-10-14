@@ -1,0 +1,6 @@
+{{- /* slug -> number of blog posts carrying the tag; tags on fewer than two posts are hidden candidates */ -}}
+{{- $c := dict -}}
+{{- range where site.RegularPages "Section" "blog" -}}
+  {{- range .Params.tags }}{{ $k := urlize . }}{{ $c = merge $c (dict $k (add 1 (index $c $k | default 0))) }}{{ end -}}
+{{- end -}}
+{{- return $c -}}

@@ -1,0 +1,4 @@
+{{- /* a blog post's shared theme tags as pills; each one opens the blog list filtered to that tag */ -}}
+{{- with partial "visible-tags.html" . }}
+<p class="tags">{{ range . }}<a class="tag" href="/blog/#tag={{ urlize . }}">{{ . }}</a>{{ end }}</p>
+{{- end }}

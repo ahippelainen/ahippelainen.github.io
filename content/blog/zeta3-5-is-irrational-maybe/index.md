@@ -2,6 +2,7 @@
 title: "ζ₃(5) is irrational...maybe."
 date: 2026-10-04
 description: "What is a theorem worth to its 'author'?"
+tags: [experiments, "AI in research", understanding, "credit and ownership", personal]
 ---
 
 See also the previous posts:
