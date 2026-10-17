@@ -1,0 +1,20 @@
+---
+title: "Context-aware news"
+date: 2026-10-17
+description: We have all it takes to democratize more holistic knowledge.
+draft: false
+---
+
+A news story can be true in every sentence and still leave you with the wrong picture, even without biased reporting or outright lies. This is simply since the context that would make sense of the story, the longer societal development over decades and sometimes centuries doesn't fit into the limited length of any news article. The article tells you what happened this week, but why it happened is left to the history books which most of us don't have enough interest in.
+
+None (or very little) of that context is secret, sitting in archives, old reporting and research, and anyone willing to spend an evening can dig it up, usually directly online. So the problem is really about logistics, not about availability per se: the distance between reading a headline and understanding it is a few hours of work, which nobody does for every story they read. With current AI models, which effectively know everything of history, so to speak, that distance could shrink to the push of a button.
+
+Something next to this already exists. Ground News (not an advertisement), for example, collects the coverage of one story from many outlets and shows how it is spread over a left–right spectrum, with a "blindspot" label for stories that are reported mostly by one side[^ground]. That widens the picture *sideways*: who is reporting this and how. What I have in mind would widen the picture *backwards*: what came before this, and what it means in such light.
+
+Concretely, I'm imagining a news platform where every story comes with a context button or a ready-generated accompanying note on context, which gives the background needed to understand the story in full. For example, the history of the conflict, the earlier attempts at a given solution or a reform, how this year's number compares with the last fifty, as deep as the reader cares to go. One also shouldn't trust a single model to write it: Models share many of their biases, but not all of them, so a panel of different models, from different labs, would be a better design, and where the models disagree, the disagreement itself would be worth showing to the reader.
+
+The obvious objection is that AI models are biased too, and that such a platform would fundamentally give even more power over what people know to the technology companies. I completely agree with this, but I don't know if it really is as big a problem as it first seems. In my view, in societal things the meaningful metric is usually not whether a system is perfect, but whether it is better than the human version of it. Human news is written under deadlines, by people with their own biases, in a format that leaves the context out by construction (not hating the player here, but the game called attention economy). I'm quite sure that a panel of current models asked to lay out the historical background of a story is already more aware of it than a typical article can be, and would get closer to something one could claim to be a complete picture of the events.
+
+It's often said that tabloids have one redeeming quality: they spur conversation. I've always been skeptical of the level of that conversation, precisely because the context is missing. What we've seen with AI models is that context is everything, and the context a human holds when reading a news article is very limited. I don't know what the funding model for such a news site would be, nor whether the general public would even be interested in such coverage (of course, availability alone could change things). Technically with current toosl, it should be easy to build: combine different sources of reporting with a layer of historical context written by several models. If done correctly, in the best case scenario it could have a positive effect on how we consume media, see world events, and are able to talk and understand about them.
+
+[^ground]: Ground News, "Understanding Ground News", <https://help.ground.news/en/categories/2272705>; "Blindspot Report", <https://about.ground.news/blindspot>.

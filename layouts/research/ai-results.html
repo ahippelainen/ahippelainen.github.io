@@ -1,0 +1,30 @@
+{{ define "main" }}
+<header class="page-head">
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}<p class="lead">{{ $.RenderString . }}</p>{{ end }}
+</header>
+<div class="content">{{ .Content }}</div>
+<h2 class="section-title">Results</h2>
+<div class="pubs">
+  {{- range hugo.Data.ai_results }}
+  <article class="pub">
+    <h3 class="pub-title">
+      {{- if .note }}<a href="{{ .note }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end -}}
+    </h3>
+    <p class="pub-venue">
+      {{- .area }} · {{ (time .date).Format "2 Jan 2006" }}
+    </p>
+    <p class="pub-venue">
+      {{- $links := slice }}
+      {{- with .note }}{{ $links = $links | append (printf `<a href="%s">Note</a>` .) }}{{ end }}
+      {{- with .companion }}{{ $links = $links | append (printf `<a href="%s">Companion</a>` .) }}{{ end }}
+      {{- with .code }}{{ $links = $links | append (printf `<a href="%s">Code</a>` .) }}{{ end }}
+      {{- with .post }}{{ $links = $links | append (printf `<a href="%s">Blog post</a>` .) }}{{ end }}
+      {{- with .hexagon }}{{ $links = $links | append (printf `<a href="%s">Hexagon</a>` .) }}{{ end }}
+      {{- delimit $links " · " | safeHTML -}}
+    </p>
+    {{- with .summary }}<div class="pub-note">{{ . | markdownify }}</div>{{ end }}
+  </article>
+  {{- end }}
+</div>
+{{ end }}

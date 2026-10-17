@@ -4,7 +4,20 @@
   {{- end }}
   <nav class="site-nav" aria-label="Main">
     {{- range site.Menus.main }}
-    <a href="{{ .URL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>
+    {{- $cur := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
+    {{- if .HasChildren }}
+    {{- /* CSS-only dropdown: opens on hover, or on focus via the caret button (keyboard, touch) */}}
+    <div class="nav-item has-sub">
+      <a href="{{ .URL }}"{{ if $cur }} aria-current="page"{{ end }}>{{ .Name }}</a><button class="sub-toggle" type="button" aria-label="More under {{ .Name }}">▾</button>
+      <div class="subnav">
+        {{- range .Children }}
+        <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
+        {{- end }}
+      </div>
+    </div>
+    {{- else }}
+    <a href="{{ .URL }}"{{ if $cur }} aria-current="page"{{ end }}>{{ .Name }}</a>
+    {{- end }}
     {{- end }}
     <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme" title="Light / dark">
       <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>

@@ -30,7 +30,12 @@ params:
 menus:
   main:
     - name: Research
+      identifier: research
       pageRef: /research
+      weight: 10
+    - name: AI-driven results
+      parent: research
+      pageRef: /research/ai-driven
       weight: 10
     - name: Projects
       pageRef: /projects

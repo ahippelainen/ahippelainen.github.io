@@ -1,0 +1,11 @@
+# AI-driven results, newest first; rendered by layouts/research/ai-results.html on /research/ai-driven/.
+# Links should be also added: note and companion (PDFs in content/research/ai-driven/), code (repository), hexagon (deposit if made), post (blog post if exists, probably not).
+- title: On the irrationality of the 3-adic zeta value ζ₃(5)
+  date: 2026-10-04
+  area: Number theory
+  summary: >
+    Claims that ζ₃(5) is irrational, adapting to p = 3 a recent 2-adic argument that was itself built on Fauzan's proof for ζ(5), with a second, independent proof via overconvergent modular forms in an appendix.
+  note: /research/ai-driven/zeta3_5.pdf
+  companion: /research/ai-driven/zeta3_5_explained.pdf
+  code: https://github.com/ahippelainen/zeta-3-5-irrational-public
+  post: /blog/zeta3-5-is-irrational-maybe/

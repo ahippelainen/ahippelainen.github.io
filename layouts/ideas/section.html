@@ -8,7 +8,7 @@
 {{- $sections := slice }}
 {{- range $reading.sections }}{{ if .items }}{{ $sections = $sections | append . }}{{ end }}{{ end }}
 {{- if .RegularPages }}
-  <h2 class="section-title">Open problems</h2>
+  <h2 class="section-title">{{ .Params.list_title | default "Open problems to solve" }}</h2>
   {{ partial "post-list.html" .RegularPages }}
 {{- else if not $sections }}
 <p class="muted">No entries yet.</p>

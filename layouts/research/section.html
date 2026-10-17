@@ -4,7 +4,13 @@
   {{- with .Description }}<p class="lead">{{ $.RenderString . }}</p>{{ end }}
 </header>
 <div class="content">{{ .Content }}</div>
-<h2 class="section-title">Papers</h2>
+{{- with site.GetPage "/research/ai-driven" }}
+<aside class="ai-callout">
+  <a href="{{ .RelPermalink }}">{{ .Title }} →</a>
+  <p>Results found and written by AI agents I directed, listed separately from the research works below.</p>
+</aside>
+{{- end }}
+<h2 class="section-title">Research works</h2>
 <div class="pubs">
   {{- $prev := 0 }}
   {{- range hugo.Data.publications }}
