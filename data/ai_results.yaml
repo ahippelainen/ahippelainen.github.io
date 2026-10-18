@@ -1,5 +1,14 @@
 # AI-driven results, newest first; rendered by layouts/research/ai-results.html on /research/ai-driven/.
 # Links should be also added: note and companion (PDFs in content/research/ai-driven/), code (repository), hexagon (deposit if made), post (blog post if exists, probably not).
+- title: Algebraicity of Weil classes on non-split abelian sixfolds of Weil type over Q(√−3) with Hermitian determinant −2
+  date: 2026-10-18
+  area: Algebraic geometry
+  summary: >
+    Claims that every Weil class is algebraic on every complex abelian sixfold of Weil type over Q(√−3) whose Hermitian form has signature (3,3) and determinant −2, a non-split case that the results on split sixfolds do not reach. The sixfolds are modelled by covers of the projective line with group the complex reflection group G₃₂, whose period map is shown to dominate their moduli space with a ball-arithmetic certificate, and the Weil classes are reduced to those of eleven cyclic subcovers. 
+  note: /research/ai-driven/weil_nonsplit.pdf
+  companion: /research/ai-driven/weil_nonsplit_explained.pdf
+  code: https://github.com/ahippelainen/weil-nonsplit-abelian-sixfolds-public
+
 - title: On the irrationality of the 3-adic zeta value ζ₃(5)
   date: 2026-10-04
   area: Number theory
