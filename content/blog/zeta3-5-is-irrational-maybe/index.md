@@ -47,13 +47,13 @@ In the first post of this series I asked who you gonna call when you don't under
 
 Because of this balance of things, here is the file:
 
-[On the irrationality of the 3-adic zeta value ζ₃(5)](zeta3_5.pdf) (PDF, 49 pages)
+[On the irrationality of the 3-adic zeta value ζ₃(5)](/research/ai-driven/zeta3_5.pdf) (PDF, 49 pages)
 
 I have read through it and had various parts rewritten which I could comprehend AND found unclear. If you want to turn this incredible mixture of arguments into something more readable, go ahead, but I doubt I am going to be the one to do it. I share it because otherwise I would just be saying that ζ₃(5) is irrational, and I could not talk about this case study at all.
 
 As I said, I have also asked for a dumbed-down or expanded version of the paper, where every statement is derived from first principles, and the first principles themselves are shown with examples. That workbook is below:
 
-[A companion to the note](zeta3_5_explained.pdf) (PDF, 269 pages)
+[A companion to the note](/research/ai-driven/zeta3_5_explained.pdf) (PDF, 269 pages)
 
 Note: I have *not* checked through this file at all except scrolled through, and have only asked Claude to double check every reference so that they would be as correct as machinely possible. I have not seen LLMs hallucinate references for quite some time now, and I am willing to believe they are pretty much correct, at least approximately as correct as an average human would be. However, due to these caveats, I want to stress that I take no responsibility of the correctness of the contents of the above file and do not posit it as any kind of scientific work, even though my belief in modern AI is strong enough to believe, that almost all of the contents are correct, and that for anyone trying to understand the proof, the contents are also highly valuable.
 
