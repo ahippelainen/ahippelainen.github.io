@@ -47,7 +47,7 @@ In the first post of this series I asked who you gonna call when you don't under
 
 Because of this balance of things, here is the file:
 
-[On the irrationality of the 3-adic zeta value ζ₃(5)](/research/ai-driven/zeta3_5.pdf) (PDF, 49 pages)
+[On the irrationality of the 3-adic zeta value ζ₃(5)](/research/ai-driven/zeta3_5.pdf) (PDF, 49 pages), also deposited on [Hexagon](https://hexagonmath.org/2610.00408v2)
 
 I have read through it and had various parts rewritten which I could comprehend AND found unclear. If you want to turn this incredible mixture of arguments into something more readable, go ahead, but I doubt I am going to be the one to do it. I share it because otherwise I would just be saying that ζ₃(5) is irrational, and I could not talk about this case study at all.
 

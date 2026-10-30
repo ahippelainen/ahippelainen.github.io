@@ -1,5 +1,15 @@
 # AI-driven results, newest first; rendered by layouts/research/ai-results.html on /research/ai-driven/.
 # Links should be also added: note and companion (PDFs in content/research/ai-driven/), code (repository), hexagon (deposit if made), post (blog post if exists, probably not).
+- title: Integral crystalline Tate classes of codimension two at supersingular points of Mumford's fourfolds
+  date: 2026-10-30
+  area: Algebraic geometry
+  summary: >
+    Claims that for p ≥ 5 and every abelian fourfold over F̄ₚ whose p-divisible group is that of the supersingular points of Mumford's families at primes inert in their cubic field (tensor-induced hyperspecial levels), the integral crystalline Tate classes of codimension two modulo products of divisor classes form (ℤ/p)⁴, and that the integral crystalline Tate conjecture holds for them in codimension two if statements in a preprint of Markman hold. Under that assumption, the missing classes are the endomorphism translates of one Weil class, specialized from a fourfold with complex multiplication.
+  note: /research/ai-driven/integral_tate.pdf
+  companion: /research/ai-driven/integral_tate_explained.pdf
+  code: https://github.com/ahippelainen/integral-tate-supersingular-fourfolds-public
+  hexagon: https://hexagonmath.org/2610.00662v1
+
 - title: Algebraicity of Weil classes on non-split abelian sixfolds of Weil type over Q(√−3) with Hermitian determinant −2
   date: 2026-10-18
   area: Algebraic geometry
@@ -18,4 +28,5 @@
   note: /research/ai-driven/zeta3_5.pdf
   companion: /research/ai-driven/zeta3_5_explained.pdf
   code: https://github.com/ahippelainen/zeta-3-5-irrational-public
+  hexagon: https://hexagonmath.org/2610.00408v2
   post: /blog/zeta3-5-is-irrational-maybe/

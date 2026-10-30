@@ -19,8 +19,8 @@
       {{- with .note }}{{ $links = $links | append (printf `<a href="%s">Note</a>` .) }}{{ end }}
       {{- with .companion }}{{ $links = $links | append (printf `<a href="%s">Companion</a>` .) }}{{ end }}
       {{- with .code }}{{ $links = $links | append (printf `<a href="%s">Code</a>` .) }}{{ end }}
-      {{- with .post }}{{ $links = $links | append (printf `<a href="%s">Blog post</a>` .) }}{{ end }}
       {{- with .hexagon }}{{ $links = $links | append (printf `<a href="%s">Hexagon</a>` .) }}{{ end }}
+      {{- with .post }}{{ $links = $links | append (printf `<a href="%s">Blog post</a>` .) }}{{ end }}
       {{- delimit $links " · " | safeHTML -}}
     </p>
     {{- with .summary }}<div class="pub-note">{{ . | markdownify }}</div>{{ end }}
